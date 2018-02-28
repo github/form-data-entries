@@ -21,3 +21,8 @@ However, once `FormData.entries` is widely support this package should be consid
 ## Undefined Behavior
 
 This module makes a best effort to match the behavior of native `FormData.entries`. It should be possible in the future to replace calls to `formDataEntries(form)` with `new FormData(form).entries()`. However, there are some cases where this module can not fully match the native behavior. If the form contains any `<input type=file>` elements, the behavior is considered undefined and should not be relied upon.
+
+## Test Suite
+
+* [Run test suite against ponyfill implementation](https://github.github.com/form-data-entries/test/test-ponyfill.html)
+* [Run test suite against browser's native implementation](https://github.github.com/form-data-entries/test/test-native.html)
