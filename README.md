@@ -14,9 +14,9 @@ for (const [name, value] of formDataEntries(myForm)) {
 
 ## Why ponyfill?
 
-This package implements `FormData.entries` as a module [ponyfill](https://ponyfill.com/) rather than a polyfill. `FormData.entries` was a later addition to the `FormData` specification. Therefore browsers may support `FormData` but not the `entries` method. It would be dangerous to attempt to fill just this additional `entries` method in browsers that have partial support. This module only implements just `entries` as a standalone function which will even work in browsers with no `FormData` support.
+This package implements `FormData.entries` as a module [ponyfill](https://ponyfill.com/) rather than a polyfill. `FormData.entries` was a later addition to the `FormData` specification. Therefore browsers may support `FormData` but not the `entries` method. It would be dangerous to attempt to fill just this additional `entries` method in browsers that have partial support. This module only implements `entries` as a standalone function which will even work in browsers with no `FormData` support.
 
-However, once `FormData.entries` is widely support this package should be considered obsolete.
+However, once `FormData.entries` is widely supported this package should be considered obsolete.
 
 ## Undefined Behavior
 
