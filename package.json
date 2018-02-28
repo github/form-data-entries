@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "FormData.entries ponyfill",
   "main": "index.js",
+  "module": "index.esm.js",
   "scripts": {
     "build": "rollup -c",
     "test": "npm run lint && npm run build",
