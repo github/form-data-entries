@@ -1,0 +1,6 @@
+{
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "extends": ["plugin:github/browser"]
+}
