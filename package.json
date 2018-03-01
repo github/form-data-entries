@@ -1,7 +1,7 @@
 {
   "name": "form-data-entries",
   "description": "FormData.entries ponyfill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.umd.js",
   "module": "index.js",
   "files": [
