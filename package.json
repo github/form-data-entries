@@ -9,7 +9,7 @@
     "test": "npm run lint && npm run build",
     "lint": "github-lint"
   },
-  "author": "GitHub",
+  "author": "GitHub, Inc.",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^4.18.1",
