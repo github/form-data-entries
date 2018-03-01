@@ -1,7 +1,7 @@
 export default {
-  input: 'index.esm.js',
+  input: 'index.js',
   output: {
-    file: 'index.js',
+    file: 'index.umd.js',
     format: 'umd',
     name: 'formDataEntries'
   }
