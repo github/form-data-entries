@@ -29,7 +29,6 @@ if (typeof FormData === 'function' && 'entries' in FormData.prototype) {
           type !== 'submit' &&
           type !== 'reset' &&
           type !== 'button' &&
-          type !== 'file' &&
           ((type !== 'radio' && type !== 'checkbox') || el.checked)
         ) {
           if (tagName === 'SELECT') {
@@ -40,6 +39,10 @@ if (typeof FormData === 'function' && 'entries' in FormData.prototype) {
                 entries.push([name, option.value]);
               }
             }
+          } else if (type === 'file') {
+            // eslint-disable-next-line no-console
+            console.warn('form-data-entries could not serialize <input type=file>', el);
+            entries.push([name, '']);
           } else {
             entries.push([name, el.value]);
           }

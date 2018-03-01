@@ -401,6 +401,33 @@ suite('input[type=radio]', function() {
   })
 })
 
+suite('input[type=file]', function() {
+  test('form with input', function() {
+    var form = document.createElement('form')
+
+    var input = document.createElement('input')
+    input.type = 'file'
+    form.appendChild(input)
+
+    assert.deepEqual(formDataEntries(form), [])
+  })
+
+  test('form with named input', function() {
+    var form = document.createElement('form')
+
+    var input = document.createElement('input')
+    input.type = 'file'
+    input.name = 'foo'
+    form.appendChild(input)
+
+    const entries = formDataEntries(form)
+    assert.equal(entries.length, 1)
+
+    assert.equal(entries[0].length, 2)
+    assert.equal(entries[0][0], 'foo')
+  })
+})
+
 suite('textarea', function() {
   test('form with textarea', function() {
     var form = document.createElement('form')
