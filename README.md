@@ -1,6 +1,6 @@
 # FormData.entries ponyfill
 
-This [ponyfill](https://ponyfill.com/) implements the `FormData` serialization algorithm. It aims to be compatible with calling the native `new FormData(form).entries()`. [jQuery's `serializeArray`](https://api.jquery.com/serializeArray/) is another implementation example.
+This [ponyfill](https://ponyfill.com/) implements the `FormData` serialization algorithm. It aims to be compatible with calling the native `new FormData(form).entries()`. [jQuery's `serializeArray`](https://api.jquery.com/serializeArray/) is another implementation example. Unlike the strict definition of a ponyfill, this implimenation falls back to the native version where available.
 
 ## Usage
 
@@ -11,6 +11,7 @@ for (const [name, value] of formDataEntries(myForm)) {
   console.log(`${name}=${value}`)
 }
 ```
+Note, unlike FormData.prototype.entries, this ponyfill returns an Array rather than an iterator.
 
 ## Why ponyfill?
 
