@@ -1,2 +1,2 @@
-/* @flow */
+/* @flow strict */
 declare export default (form: HTMLFormElement) => Array<[string, string]>;
