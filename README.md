@@ -20,7 +20,10 @@ However, once `FormData.entries` is widely supported this package should be cons
 
 ## Undefined Behavior
 
-This module makes a best effort to match the behavior of native `FormData.entries`. It should be possible in the future to replace calls to `formDataEntries(form)` with `new FormData(form).entries()`. However, there are some cases where this module can not fully match the native behavior. If the form contains any `<input type=file>` elements, the behavior is considered undefined and should not be relied upon.
+This module makes a best effort to match the behavior of native `FormData.entries`. It should be possible in the future to replace calls to `formDataEntries(form)` with `new FormData(form).entries()`. However, there are some cases where this module can not fully match the native behavior.
+
+- If the form contains any `<input type=file>` elements, the behavior is considered undefined and should not be relied upon.
+- When called on form submit event, the ponyfill will not include the [`submitter`](https://html.spec.whatwg.org/#constructing-form-data-set) value. There is no way to do this reliably because [the `submitter` element is not exposed](https://github.com/whatwg/html/issues/3195).
 
 ## Test Suite
 
